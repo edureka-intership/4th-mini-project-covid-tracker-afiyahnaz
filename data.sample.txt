@@ -1,0 +1,21 @@
+  mealType
+  
+       content: "Start your day with exclusive breakfast options",
+      image: "assets/dinner.png",
+      mealType: 3
+      name: "Dinner",
+      _id: "62fe0c04d83d646dcb1f39e1"
+   
+
+
+location
+
+
+city : "Delhi"
+city_id: 1
+country_name: "India"
+location_id  :  1
+name: "shalimar Bagh"
+_id : "62fded81d83d646dcb1f39be"
+
+
