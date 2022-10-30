@@ -1,3 +1,4 @@
+import React from "react";
 import { GoogleOAuthProvider,  GoogleLogin } from '@react-oauth/google';
 import {useNavigate} from 'react-router-dom';
 import jwt_decode from "jwt-decode";
@@ -70,6 +71,8 @@ function Header(props) {
       <>
 
      <GoogleOAuthProvider clientId="586235440455-7esd81dskqcnntqpibv06jkti5fonkku.apps.googleusercontent.com">
+        {/* <Login success={onSuccess} error={onError} /> */}
+        {/* <SignUp success={onSuccess} error={onError} /> */}
 <div className="modal fade" id="google-sign-in" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog">
     <div className="modal-content">
@@ -78,7 +81,9 @@ function Header(props) {
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div className="modal-body">
-      <GoogleLogin  onSuccess = { onsuccess} onError  = { onError }/>
+      <GoogleLogin  
+      onSuccess = { onsuccess} 
+      onError  = { onError }/>
         </div>
       </div>
   </div>
@@ -104,10 +109,11 @@ function Header(props) {
                 >
                   Login
             </button>
-              <button className="btn btn-outline-light">
+               <button className="btn btn-outline-light">
                 <i className="fa fa-search" aria-hidden="true"></i>Create a
                 Account
-              </button>
+              </button> 
+
             </div>
          )}
     
