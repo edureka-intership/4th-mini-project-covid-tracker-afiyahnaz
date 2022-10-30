@@ -18,7 +18,7 @@ function SearchPageResult() {
 
   let   getLocationList  = async  () =>{
     try{
-        let URL = await   axios.get("https://zomatoclonenodejs.herokuapp.com/api/getLocation");
+        let URL = await   axios.get("https://zomatoclonenodejs1.herokuapp.com/api/getLocation");
         let response = await axios.get(URL);
         let { status, location } = response.data;
         if (status ) {
@@ -38,7 +38,7 @@ function SearchPageResult() {
 
   let filterOperation = async (_filter) => {
      _filter = { _filter };
-    let URL = "https://zomatoclonenodejs.herokuapp.com/api/filter";
+    let URL = "https://zomatoclonenodejs1.herokuapp.com/api/filter";
    
     if (searchParams.get("meal_type")) {
       _filter["mealtype"] = searchParams.get("mealType");

@@ -11,7 +11,7 @@ function Wallpaper() {
   
   let   getLocationList  = async  () =>{
   try{
-      let response = await   axios.get("https://zomatoclonenodejs.herokuapp.com/api/getLocation");
+      let response = await   axios.get("https://zomatoclonenodejs1.herokuapp.com/api/getLocation");
       let data = response.data;
       if (data.status === true ) {
            setLocationList([...data.result])
@@ -28,7 +28,7 @@ function Wallpaper() {
         let value = event.target.value;
         if(value !== "") {
           try{
-            let  url =`https://zomatoclonenodejs.herokuapp.com/api/getRestaurantByLocationId/${value}`;
+            let  url =`https://zomatoclonenodejs1.herokuapp.com/api/getRestaurantByLocationId/${value}`;
             let { data } =  await  axios.get(url);
             if(data.status === true){
               if(data.result.length === 0) {

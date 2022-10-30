@@ -71,8 +71,7 @@ function Header(props) {
       <>
 
      <GoogleOAuthProvider clientId="586235440455-7esd81dskqcnntqpibv06jkti5fonkku.apps.googleusercontent.com">
-        {/* <Login success={onSuccess} error={onError} /> */}
-        {/* <SignUp success={onSuccess} error={onError} /> */}
+      
 <div className="modal fade" id="google-sign-in" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog">
     <div className="modal-content">

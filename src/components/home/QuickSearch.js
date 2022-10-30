@@ -13,7 +13,7 @@ let  [mealTypeList, setMealTypeList] = useState([]);
   let getMealTypes = async () => {
     try{
       let response = await axios.get(
-        "https://zomatoclonenodejs.herokuapp.com/api/getMealTypes"
+        "https://zomatoclonenodejs1.herokuapp.com/api/getMealTypes"
         );
       let data = response.data;
         if(data.status === true) {

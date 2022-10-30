@@ -55,7 +55,7 @@ let [userDetails, setUserDetails] = useState( getTOkenDetails);
 
   let getRestaurantDetails = async () => {
     try {
-      let URL = 'https://zomatoclonenodejs.herokuapp.com/api/getRestaurantDetailsById/' + id;
+      let URL = 'https://zomatoclonenodejs1.herokuapp.com/api/getRestaurantDetailsById/' + id;
       let { data } = await axios.get(URL);
 
       if (data.status === true) {
@@ -69,7 +69,7 @@ let [userDetails, setUserDetails] = useState( getTOkenDetails);
   };
   let getMenuItems = async () => {
     try {
-      let URL = `https://zomatoclonenodejs.herokuapp.com/api/getMenuItemListByRestaurantId/${id}`;
+      let URL = `https://zomatoclonenodejs1.herokuapp.com/api/getMenuItemListByRestaurantId/${id}`;
       let { data } = await axios.get(URL);
       if (data.status === true) {
         setMenuItems([...data.result]);
@@ -123,7 +123,7 @@ let [userDetails, setUserDetails] = useState( getTOkenDetails);
 
     };
     var { data } = await axios.post(
-      "https://zomatoclonenodejs.herokuapp.com/api/payment/genOrder",
+      "https://zomatoclonenodejs1.herokuapp.com/api/payment/genOrder",
       serverData
     );
     console.log(data);
@@ -144,7 +144,7 @@ let [userDetails, setUserDetails] = useState( getTOkenDetails);
           razorpay_signature: response.razorpay_signature,
         };
         var { data } = await axios.post(
-          "https://zomatoclonenodejs.herokuapp.com/api/payment/verify",
+          "https://zomatoclonenodejs1.herokuapp.com/api/payment/verify",
           sendData
         );
        if (data.status === true)  {
